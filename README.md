@@ -36,33 +36,33 @@ _Will make the 2 files, 01... and 01b... into 1 chapter with the title: Chapter 
 
 ##Functions
 There are 6 functions, one for each step of the process
-### 1) get_metadata
+#### 1) get_metadata
 produces a FFMETADATA.txt with the basic info from a file
 requires a file argument to work if run solo
 `ex: get_metadata file.m4a`
 
-### 2) remove_bad_names
+#### 2) remove_bad_names
 renames all .m4a files in the working directory the rename removes spaces, commas, apostrophes, and adds leading zeros to single digits
 
 This function also calls get_metadata on the first file it finds
 
-### 3) add_chapter_metadata
+#### 3) add_chapter_metadata
 Adds Chapter info to the metadata file from the individual files Metadata
 See the note above about chapters spanning multiple tracks
 
 > NOTE: if you wish to check the metadata, do so now - you can directly edit the txt file if you would like
 
-### 4) join_all_m4a
+#### 4) join_all_m4a
 Takes all the m4a files an m4b file using the metadata from the above commands
 
-### 5) create_directory
+#### 5) create_directory
 Uses the artist and album info to create folders and places the file in them `$artist/$album/$file`
 
-### 6) join_cd
+#### 6) join_cd
 runs the first 4 commands in order (doesn't create directories)
 
-### 7) join_cd_dir
+#### 7) join_cd_dir
 runs the first 5 commands in order
 
-### 8) join_cd_menu
+#### 8) join_cd_menu
 uses bash select to present the 5 commands, so you can run them by entering numbers sequentially
