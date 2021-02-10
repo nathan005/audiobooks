@@ -18,7 +18,7 @@ I'm running OSX, this script has only been tested on my local system as it was w
     4. press enter _you should see the directory name before the % in terminal now_
     5. add the following command `chmod +x fromcd.sh`
 3. Execute the script by typing `./fromcd.sh` in terminal
-4. Choose the funcion you would like to run
+4. Choose the option you would like to run
 
 ## Converting from CD
 The functions are designed to make it easier to convert m4a files from an AudioBook CD
