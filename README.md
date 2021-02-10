@@ -42,7 +42,7 @@ _Will make the 2 files, 01... and 01b... into 1 chapter with the title: Chapter 
   
 * I would reccomend https://metaz.io if you need to edit metadata 
 
-## Functions
+## Options
 There are 5 options, plus quit
 #### 1) Create metadata file
 Will rename all .m4a files in the working directory. 
