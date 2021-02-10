@@ -22,7 +22,7 @@ I'm running OSX, this script has only been tested on my local system as it was w
 
 ## Converting from CD
 The functions are designed to make it easier to convert m4a files from an AudioBook CD
-This should be imported from a cd that you own a single folder with all the audio files in order, named by disk-track numbers
+This should be imported from a cd that you own to a single folder with all the audio files in order, named by disk-track numbers
 This is the default behavior when importing with iTunes etc.
 
 > ex: 01-01 Intro.m4a, 01-02 Chapter 1 - Title
