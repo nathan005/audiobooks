@@ -42,35 +42,32 @@ _Will make the 2 files, 01... and 01b... into 1 chapter with the title: Chapter 
   
 * I would reccomend https://metaz.io if you need to edit metadata 
 
-##Functions
-There are 6 functions, one for each step of the process
-#### 1) get_metadata
-produces a FFMETADATA.txt with the basic info from a file
-requires a file argument to work if run solo
-`ex: get_metadata file.m4a`
+## Functions
+There are 5 options, plus quit
+#### 1) Create metadata file
+Will rename all .m4a files in the working directory. 
+And produce a FFMETADATA.txt file with album and track info
 
-#### 2) remove_bad_names
-renames all .m4a files in the working directory the rename removes spaces, commas, apostrophes, and adds leading zeros to single digits
+The rename removes spaces, commas, apostrophes, and adds leading zeros to single digits
 
-This function also calls get_metadata on the first file it finds
-
-#### 3) add_chapter_metadata
-Adds Chapter info to the metadata file from the individual files Metadata
-See the note above about chapters spanning multiple tracks
+> See the note in Chapterized Files about chapters spanning multiple tracks
 
 > NOTE: if you wish to check the metadata, do so now - you can directly edit the txt file if you would like
 
-#### 4) join_all_m4a
-Takes all the m4a files an m4b file using the metadata from the above commands
+#### 2) Join *.m4a and exisiting FFMETADATA.txt
+Takes all the m4a files in the directory and the FFMETADATA.txt file from the above commands and makes a chapterized m4b file.
 
-#### 5) create_directory
+> This command requires there be both an m4a and a FFMETADATA.txt in the working directory.
+
+#### 3) Create metadata and m4b
+Same as running both 1 followed by 2. 
+
+#### 4) Create m4b and put in dir
+Same as running both 1, 2, followed by 5 
+
+#### 5) Create Directories for *.m4b
 Uses the artist and album info to create folders and places the file in them `$artist/$album/$file`
 
-#### 6) join_cd
-runs the first 4 commands in order (doesn't create directories)
-
-#### 7) join_cd_dir
-runs the first 5 commands in order
-
-#### 8) join_cd_menu
-uses bash select to present the 5 commands, so you can run them by entering numbers sequentially
+#### 6) quit
+exits the select menu
+> as with every program it also can be exitied with control+c
