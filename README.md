@@ -10,10 +10,18 @@ I'm running OSX, this script has only been tested on my local system as it was w
 ## Usage
 > NOTE: I wrote this primarily for my personal use, so I have not tested it on other systems.
 
-1. Place the script in 
+1. Place the script in the folder with the m4a files you wish to convert
+2. Make the file executable
+    1. open terminal (command+space type terminal)
+    2. type in cd followed by a space: `cd `
+    3. drag the folder with the m4a files into the terminal window _(will highlight blue and add a directory when you let go)_ 
+    4. press enter _you should see the directory name before the % in terminal now_
+    5. add the following command `chmod +x fromcd.sh`
+3. Execute the script by typing `./fromcd.sh` in terminal
+4. Choose the funcion you would like to run
 
 ## Converting from CD
-Most of the functions are designed to make it easier to convert m4a files from an AudioBook CD
+The functions are designed to make it easier to convert m4a files from an AudioBook CD
 This should be imported from a cd that you own a single folder with all the audio files in order, named by disk-track numbers
 This is the default behavior when importing with iTunes etc.
 
@@ -34,7 +42,7 @@ _Will make the 2 files, 01... and 01b... into 1 chapter with the title: Chapter 
   
 * I would reccomend https://metaz.io if you need to edit metadata 
 
-## Functions
+##Functions
 There are 6 functions, one for each step of the process
 #### 1) get_metadata
 produces a FFMETADATA.txt with the basic info from a file
