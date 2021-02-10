@@ -8,4 +8,4 @@ These should be imported from a cd that you own a single folder with all the aud
 The files should be in a single folder in order, named by disk-track numbers
 This is the default behavior when importing with iTunes
 
-#  ex: 01-01 Intro.m4a, 01-02 Chapter 1 - Title 
+{ex: 01-01 Intro.m4a, 01-02 Chapter 1 - Title}
