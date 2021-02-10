@@ -36,11 +36,14 @@ If you want the file to include chapter markers, when importing the files to mak
 
 > ex: Chapter 01 - The Beginning, Chapter 01b - The Beginning
 
-_Will make the 2 files, 01... and 01b... into 1 chapter with the title: Chapter 01 - The Beginning_
+_Will make the 2 files above, 01... and 01b... into 1 chapter with the title: 1. The Beginning_
 
 * The script will merge these tracks only if the metadata title is the same, besides the trailing character
   
 * I would reccomend https://metaz.io if you need to edit metadata 
+
+* The script is set to remove "Chapter " and output the chapter number followed by a period. 
+I find this easier to read since I know the number is a chapter number
 
 ## Options
 There are 5 options, plus quit
