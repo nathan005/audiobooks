@@ -42,8 +42,7 @@ _Will make the 2 files above, 01... and 01b... into 1 chapter with the title: 1.
   
 * I would reccomend https://metaz.io if you need to edit metadata 
 
-* The script is set to remove "Chapter " and output the chapter number followed by a period. 
-I find this easier to read since I know the number is a chapter number
+* The script is set to remove "Chapter " and output the chapter number followed by a period. I find this easier to read since I know the number is a chapter number
 
 ## Options
 There are 5 options, plus quit
