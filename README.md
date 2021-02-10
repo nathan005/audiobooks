@@ -34,7 +34,7 @@ _Will make the 2 files, 01... and 01b... into 1 chapter with the title: Chapter 
   
 * I would reccomend https://metaz.io if you need to edit metadata 
 
-##Functions
+## Functions
 There are 6 functions, one for each step of the process
 #### 1) get_metadata
 produces a FFMETADATA.txt with the basic info from a file
