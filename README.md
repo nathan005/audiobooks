@@ -17,6 +17,7 @@ I'm running OSX, this script has only been tested on my local system as it was w
     3. drag the folder with the m4a files into the terminal window _(will highlight blue and add a directory when you let go)_ 
     4. press enter _you should see the directory name before the % in terminal now_
     5. add the following command `chmod +x fromcd.sh`
+    > file should only need to be made executable on your system 1 time
 3. Execute the script by typing `./fromcd.sh` in terminal
 4. Choose the option you would like to run
 
