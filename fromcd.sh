@@ -191,7 +191,7 @@ add_chapter_metadata () {
         title=${title//"Ch "}
         title=${title// - /. }
         title=${title//: /. }
-        title=$(sed -E 's|([0-9]{2})[a-zA-Z](.*)$|\1\2|g' <<< "$title")
+        title=$(sed -E 's|([0-9]{1,2})[a-zA-Z](.*)$|\1\2|g' <<< "$title")
         title=$(sed -E 's|0([1-9])(.*)$|\1\2|' <<< "$title")
 
         duration=$(echo "$duration + $ch_duration"  | bc);
