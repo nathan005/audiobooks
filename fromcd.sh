@@ -148,10 +148,10 @@ remove_bad_names () {
         mv "$f" "$zero"
 
         if [[ $i = 1 ]]; then
-          album=$(ffprobe -v quiet -show_entries format_tags=album -of default=nk=1:nw=1 $f);
+          album=$(ffprobe -v quiet -show_entries format_tags=album -of default=nk=1:nw=1 $zero);
           echo $album;
-          artist=$(ffprobe -v quiet -show_entries format_tags=artist -of default=nk=1:nw=1 $f);
-          get_metadata $f;
+          artist=$(ffprobe -v quiet -show_entries format_tags=artist -of default=nk=1:nw=1 $zero);
+          get_metadata $zero;
         fi
 
         ((i++));
@@ -187,12 +187,13 @@ add_chapter_metadata () {
         ch_start_time=$(ffprobe -v quiet -show_entries stream=start_time -of default=nk=1:nw=1 $f);
         title=$(ffprobe -v quiet -show_entries format_tags=title -of default=nk=1:nw=1 $f);
 
-        title=${title//"Chapter "}
-        title=${title//"Ch "}
-        title=${title// - /. }
-        title=${title//: /. }
-        title=$(sed -E 's|([0-9]{1,2})[a-zA-Z](.*)$|\1\2|g' <<< "$title")
+        title=$(sed -E 's|^[cC]hapter (.*)$|\1|' <<< "$title")
+        title=$(sed -E 's|^[cC]h (.*)$|\1|' <<< "$title")
+        title=$(sed -E 's|([0-9]{1,2})[a-zA-Z](.*)$|\1\2|' <<< "$title")
         title=$(sed -E 's|0([1-9])(.*)$|\1\2|' <<< "$title")
+        title=$(sed -E 's|([0-9]{1,2}): (.*)$|\1. \2|' <<< "$title")
+        title=$(sed -E 's|([0-9]{1,2})[ ][-][ ](.*)$|\1. \2|' <<< "$title")
+        title=$(sed -E 's|([0-9]{1,2})[ ](.*)$|\1. \2|' <<< "$title")
 
         duration=$(echo "$duration + $ch_duration"  | bc);
 
