@@ -80,7 +80,7 @@
 #######################################
 if [ ! -x /usr/local/bin/ffmpeg ] ; then
     # fallback check using posix compliant `command` in case not installed in expected location
-    command -v wget >/dev/null 2>&1 || { echo >&2 "Please install ffmpeg. Aborting."; exit 1; }
+    command -v wget >/dev/null 2>&1 || { echo >&2 "Please install ffmpeg."; 1; }
 fi
 
 
