@@ -189,10 +189,19 @@ add_chapter_metadata () {
 
         title=$(sed -E 's|^[cC]hapter (.*)$|\1|' <<< "$title")
         title=$(sed -E 's|^[cC]h (.*)$|\1|' <<< "$title")
+        
         title=$(sed -E 's|([0-9]{1,2})[a-zA-Z](.*)$|\1\2|' <<< "$title")
         title=$(sed -E 's|0([1-9])(.*)$|\1\2|' <<< "$title")
+        
+        title=$(sed -E 's|([0-9]{1,2}) : (.*)$|\1. \2|' <<< "$title")
         title=$(sed -E 's|([0-9]{1,2}): (.*)$|\1. \2|' <<< "$title")
+        title=$(sed -E 's|([0-9]{1,2})[ ][ ][-][ ][ ](.*)$|\1. \2|' <<< "$title")
+        title=$(sed -E 's|([0-9]{1,2})[ ][ ][-][ ](.*)$|\1. \2|' <<< "$title")
+        title=$(sed -E 's|([0-9]{1,2})[ ][-][ ][ ](.*)$|\1. \2|' <<< "$title")
         title=$(sed -E 's|([0-9]{1,2})[ ][-][ ](.*)$|\1. \2|' <<< "$title")
+        title=$(sed -E 's|([0-9]{1,2})[-][ ](.*)$|\1. \2|' <<< "$title")
+        title=$(sed -E 's|([0-9]{1,2})[ ][-](.*)$|\1. \2|' <<< "$title")
+        title=$(sed -E 's|([0-9]{1,2})[-](.*)$|\1. \2|' <<< "$title")
         title=$(sed -E 's|([0-9]{1,2})[ ](.*)$|\1. \2|' <<< "$title")
 
         duration=$(echo "$duration + $ch_duration"  | bc);
