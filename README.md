@@ -32,8 +32,8 @@ This is the default behavior when importing with iTunes etc.
 If you want the file to include chapter markers, when importing the files to make sure the metadata is correct.
 
 - Every file (from each CD) should have the same album and artist info
-- Each track should be named how you would the title of the chapter to appear
-- If a chapter is broken into multiple files - Make sure they are named the same, but with a trailing digit following the chapter number
+- Each track should be named how you want the title of the chapter to appear
+- If a chapter is broken into multiple files - Make sure the titles are named the same, but with a trailing digit following the chapter number
 
 > ex: Chapter 01 - The Beginning, Chapter 01b - The Beginning
 
