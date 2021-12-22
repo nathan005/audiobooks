@@ -260,7 +260,8 @@ join_all_m4a () {
     fn=${album// /}
     joined="${fn}.m4a"
     output="${fn}.m4b"
-    ls *.m4a | awk -F':' '{ print "file "$1 }' | ffmpeg -f concat -safe 0 -protocol_whitelist "file,http,https,tcp,tls,pipe" -i - -c copy $joined
+    ls *.m4a | perl -ne 'print "file $_"' > TRACKLIST.txt
+    ffmpeg -f concat -i TRACKLIST.txt -c copy $joined
     ffmpeg -i $joined -i $meta -map_metadata 1 -codec copy $output;
     rm $joined;
 }
