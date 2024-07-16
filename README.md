@@ -41,7 +41,7 @@ _Will make the 2 files above, 01... and 01b... into 1 chapter with the title: 1.
 
 * The script will merge these tracks only if the metadata title is the same, besides the trailing character
 * The script is set to remove "Chapter " and output the chapter number followed by a period. I find this easier to read since I know the number is a chapter number
-* I would reccomend https://metaz.io if you need to edit metadata 
+* I would reccomend [MetaZ](https://metaz.maven-group.org) if you need to edit metadata 
 
 ## Options
 There are 5 options, plus quit
